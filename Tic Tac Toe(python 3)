@@ -1,0 +1,97 @@
+
+the_grid = [["","",""],
+            ["","",""],
+            ["","",""]]
+the_grid_blank = [["","",""],
+                  ["","",""],
+                  ["","",""]]
+
+player_1_turnX = True
+
+
+play_game = input("would you like to play tic tack toe?")
+
+while play_game == "no":
+    play_game = input("did you change your mind?")
+
+if play_game == "yes":
+
+    print(the_grid[0])
+    print(the_grid[1])
+    print(the_grid[2])
+    while play_game == "yes":
+        spaceR = int(input("choose a row")) - 1
+        spaceC = int(input("choose a column")) - 1
+
+        if (player_1_turnX == True) and (the_grid[spaceR][spaceC] == ""):
+            the_grid[spaceR][spaceC] = "x"
+            player_1_turnX = False
+            print("end of player x's turn")
+            print(the_grid[0])
+            print(the_grid[1])
+            print(the_grid[2])
+
+        else:
+            if (player_1_turnX == False) and (the_grid[spaceR][spaceC] == ""):
+                the_grid[spaceR][spaceC] = "o"
+                player_1_turnX = True
+                print("end of player o's turn")
+                print(the_grid[0])
+                print(the_grid[1])
+                print(the_grid[2])
+
+        if the_grid[0][0] == the_grid[1][0] == the_grid[2][0]:
+            print("you won")
+            play_game = ""
+            the_grid = the_grid_blank
+            player_1_turnx = True
+            play_game = input("would you like to play tic tack toe?")
+
+        if the_grid[0][1] == the_grid[1][1] == the_grid[2][1]:
+            print("you won")
+            play_game = ""
+            the_grid = the_grid_blank
+            player_1_turnx = True
+            play_game = input("would you like to play tic tack toe?")
+
+        if the_grid[0][2] == the_grid[1][2] == the_grid[2][2]:
+            print("you won")
+            play_game = ""
+            the_grid = the_grid_blank
+            player_1_turnx = True
+            play_game = input("would you like to play tic tack toe?")
+
+        if the_grid[0][0] == the_grid[0][1] == the_grid[0][2]:
+            print("you won")
+            play_game = ""
+            the_grid = the_grid_blank
+            player_1_turnx = True
+            play_game = input("would you like to play tic tack toe?")
+
+        if the_grid[1][0] == the_grid[1][1] == the_grid[1][2]:
+            print("you won")
+            play_game = ""
+            the_grid = the_grid_blank
+            player_1_turnx = True
+            play_game = input("would you like to play tic tack toe?")
+
+        if the_grid[1][0] == the_grid[1][1] == the_grid[1][2]:
+            print("you won")
+            play_game = ""
+            the_grid = the_grid_blank
+            player_1_turnx = True
+            play_game = input("would you like to play tic tack toe?")
+
+        if the_grid[0][0] == the_grid[1][1] == the_grid[2][2]:
+            print("you won")
+            play_game = ""
+            the_grid = the_grid_blank
+            player_1_turnx = True
+            play_game = input("would you like to play tic tack toe?")
+
+        if the_grid[0][2] == the_grid[1][1] == the_grid[2][0] :
+            print("you won")
+            play_game = ""
+            the_grid = the_grid_blank
+            player_1_turnx = True
+            play_game = input("would you like to play tic tack toe?")

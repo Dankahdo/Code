@@ -12,7 +12,8 @@ var Right = xDirection = 1;
 var Speed = 2
 var aniSpeed = 0.25
 //movement and sprite animations
-
+//Obj_interaction_zone is the invisiable object that appears in front of the player allowing it to interact with other objects
+//without true collision with the player object.
 
 if (Up){
  Obj_Player.y -= Speed; 
